@@ -1,0 +1,56 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #f8f9fa; /* Set your desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem; /* Adjust the font size */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #495057; /* Set link color */
+    font-weight: bold; /* Make links bold */
+    margin-right: 15px; /* Adjust spacing between links */
+    transition: color 0.3s; /* Add smooth color transition */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #28a745; /* Set color for active link */
+  }
+  
+  /* Fix for active link background */
+  .navbar-nav .nav-item.active {
+    background-color: transparent !important;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 991.98px) {
+    .navbar-toggler {
+      border-color: #007bff; /* Set color for the toggle button */
+    }
+  
+    .navbar-toggler-icon {
+      background-color: #007bff; /* Set color for the toggle icon */
+    }
+  
+    .navbar-collapse {
+      background-color: #f8f9fa; /* Set background color for the collapsed menu */
+    }
+  
+    .navbar-nav {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .navbar-nav .nav-link {
+      margin-right: 0; /* Remove right margin on small screens */
+      margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+  }
+  

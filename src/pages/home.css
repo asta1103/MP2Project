@@ -1,0 +1,9 @@
+img{
+    height: 600px !important;
+}
+
+.service-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../utils/img/service.jpeg);
+    background-size: cover;
+    background-position: center;
+}
