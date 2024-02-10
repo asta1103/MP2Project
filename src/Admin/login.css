@@ -1,46 +1,15 @@
-body {
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  /* Style the card container */
-  .card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Add padding and background color to the card body */
-  .card-body {
-    padding: 16px;
-    background-color: #ffffff;
-  }
-  
-  /* Style the form labels and inputs */
-  .form-label {
-    font-weight: bold;
-  }
-  
-  .form-control {
-    margin-bottom: 8px;
-  }
-  
-  /* Style the "Don't have an account yet?" text and the "Sign Up" link */
-  .text-center {
-    text-align: center;
-  }
-  
-  .btn-link {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  /* Style the login button */
-  .btn-primary {
-    background-color: #007bff;
-    color: #ffffff;
-  }
-  
-  /* Add space between the bottom of the card and the button */
-  .text-center:last-child {
-    margin-top: 8px;
-  }
+.form_container{
+    width: 30%;
+}
+
+@media screen and (max-width:1000px){
+    .form_container{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .form_container{
+        width: 65%;
+    }
+}

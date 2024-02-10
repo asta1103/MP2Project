@@ -1,6 +1,6 @@
 import React from 'react';
 import '../pages/navbar.css';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const navBar = () => {
@@ -8,7 +8,7 @@ const navBar = () => {
     <Navbar expand="lg" className='fixed-top bg-body-tertiary shadow'>
         <Container>
           <Navbar.Brand>
-            <Link to="/" className='navbar-brand text-sucess fw-semibold'>
+            <Link to="/" className='navbar-brand text-dark fw-semibold'>
               JGarage.
             </Link>
           </Navbar.Brand>
@@ -20,7 +20,7 @@ const navBar = () => {
               <Nav.Link href='/team' className='text-uppercase'>Our Team</Nav.Link>
               <Nav.Link href='/about' className='text-uppercase'>About</Nav.Link>
               <Nav.Link href='/contact' className='text-uppercase'>Contact</Nav.Link>
-              <Nav.Link href='/book' className='text-uppercase'>Book Now</Nav.Link>
+              <Button href='/book' className='text-uppercase bg-dark'>Book Now</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>

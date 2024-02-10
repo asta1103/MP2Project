@@ -1,39 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './About.css';
+import Reviews from '../Components/Reviews';
+import About1 from '../utils/img/About1.jpeg';
+import About2 from '../utils/img/About2.jpeg';
 
-const about = () => {
+const About = () => {
   return (
-    <div className="d-flex align-items-center justify-content-center" style={{ height: '100vh' }}>
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="card mt-5">
-            <div className="card-body">
-              <h2 className="card-title text-center">Sign In</h2>
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="inputEmail" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="inputEmail" required />
+    <div className='about-page'>
+            <header className='mt-5'>
+                <div className='container h-100 d-flex align-items-center justify-content-center'>
+                    <h1 className='text-light'>Why you Choose Us</h1>
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="inputPassword" className="form-label">Password</label>
-                  <input type="password" className="form-control" id="inputPassword" required />
+            </header>
+
+            <div className='container my-5'>
+                <p>JGarage Services is my owned business that has been operating for over 1103 years.
+                    The success of our business within the years has been reflected among our professionalism in the automotive industry and honesty towards our client.
+                    Our team are fully experienced and qualified mechanics that are very knowledgeable in most makes and models.
+                    Our aim is to provide our customers with consistent affordable pricing and a 5 Star exceptional service.
+                </p>
+                <div className='row'>
+                    <div className='col-lg-6'>
+                        <img src={About1} className='img-fluid my-4 h-auto' alt="" />
+                    </div>
+                    <div className='col-lg-6'>
+                        <img src={About2} className='img-fluid my-4 h-auto' alt="" />
+                    </div>
                 </div>
-                <div className="mb-3 text-center">
-                  <p className="mb-0">Don't have an Account yet?</p>
-                  <Link to= '/register'>Sign Up</Link>
-                </div>
-                <div className="text-center">
-                  <button type="submit" className="btn btn-primary">Login</button>
-                </div>
-              </form>
             </div>
-          </div>
+
+
+            <div className='my-5'>
+                <Reviews />
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
   )
 }
 
-export default about
+export default About
