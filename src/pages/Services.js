@@ -75,19 +75,19 @@ const DentData = [
       id: 1,
       name: 'Glass and Paintless Dent Repair',
       description: 'Whether it is your windshield or driverside door glass we can assist you with all your glass replacement needs. We can replace your glass and clean up the unwanted mess all at one of our convenient facilities. The important thing is to get you back on the road as quickly as possible. Simply call or set up an appointment online to have your vehicle repaired today!',
-      price: '8,000-18-000'
+      price: 'range 8,000-18-000'
   },
   {
     id: 2,
     name: 'Glass and Paintless Dent Repair',
     description: 'Whether it is your windshield or driverside door glass we can assist you with all your glass replacement needs. We can replace your glass and clean up the unwanted mess all at one of our convenient facilities. The important thing is to get you back on the road as quickly as possible. Simply call or set up an appointment online to have your vehicle repaired today!',
-    price: '8,000-18-000'
+    price: 'range 8,000-18-000'
   },
   {
     id: 3,
     name: 'Glass and Paintless Dent Repair',
     description: 'Whether it is your windshield or driverside door glass we can assist you with all your glass replacement needs. We can replace your glass and clean up the unwanted mess all at one of our convenient facilities. The important thing is to get you back on the road as quickly as possible. Simply call or set up an appointment online to have your vehicle repaired today!',
-    price: '8,000-18-000'
+    price: 'range 8,000-18-000'
   }
 ];
 
@@ -110,7 +110,7 @@ const services = () => {
                 <div className='col-lg-6 d-flex flex-column justify-content-around'>
                     {jdmData.map((jdmData) => (
                         <div key={jdmData.id}>
-                            <Card className='border-0'>
+                            <Card className='border-0 bg-dark text-white'>
                                 <CardBody>
                                     <CardTitle className='text-center fs-6'>
                                         {jdmData.name}
@@ -130,13 +130,13 @@ const services = () => {
         </div>
     </div>
 
-    <div className='BodyCol bg-dark  py-5'>
+    <div className='BodyCol bg-dark py-5'>
         <div className='container'>
             <div className='row'>
                 <div className='col-lg-6 d-flex flex-column justify-content-around'>
                     {BodyColData.map((BodyColData) => (
                         <div key={BodyColData.id}>
-                            <Card className='border-0 bg-dark '>
+                            <Card className='border-0 bg-white '>
                                 <CardBody>
                                     <CardTitle className='text-center fs-6'>
                                         {BodyColData.name}
@@ -168,7 +168,7 @@ const services = () => {
                 <div className='col-lg-6 d-flex flex-column justify-content-around'>
                     {PaintData.map((PaintData) => (
                         <div key={PaintData.id}>
-                            <Card className='border-0'>
+                            <Card className='border-0 bg-dark text-white'>
                                 <CardBody>
                                     <CardTitle className='text-center fs-6'>
                                         {PaintData.name}
@@ -194,7 +194,7 @@ const services = () => {
                 <div className='col-lg-6 d-flex flex-column justify-content-around'>
                     {DentData.map((DentData) => (
                         <div key={DentData.id}>
-                            <Card className='border-0 bg-dark '>
+                            <Card className='border-0 bg-white '>
                                 <CardBody>
                                     <CardTitle className='text-center fs-6'>
                                         {DentData.name}

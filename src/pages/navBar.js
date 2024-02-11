@@ -3,7 +3,7 @@ import '../pages/navbar.css';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const navBar = () => {
+const  NavBar = () => {
   return (
     <Navbar expand="lg" className='fixed-top bg-body-tertiary shadow'>
         <Container>
@@ -20,7 +20,7 @@ const navBar = () => {
               <Nav.Link href='/team' className='text-uppercase'>Our Team</Nav.Link>
               <Nav.Link href='/about' className='text-uppercase'>About</Nav.Link>
               <Nav.Link href='/contact' className='text-uppercase'>Contact</Nav.Link>
-              <Button href='/book' className='text-uppercase bg-dark'>Book Now</Button>
+              <Button href='/book' className='text-uppercase bg-secondary border-0'>Book Now</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -28,4 +28,4 @@ const navBar = () => {
   )
 }
 
-export default navBar
+export default NavBar
