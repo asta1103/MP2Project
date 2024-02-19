@@ -12,7 +12,7 @@ const AdminRoot = () => {
 
     <div className='container-fluid bg-secondary min-vh-100'>
       <div className='row'>
-        {toggle && <div className='col-2 bg-white '>
+        {toggle && <div className='col-2 bg-white vh-100'>
             <Sidebar/>
         </div>}
         {toggle && <div className='col-10'>
