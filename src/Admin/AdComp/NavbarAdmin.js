@@ -1,37 +1,66 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { JustifyLeft, PersonCircle } from 'react-bootstrap-icons'
-import { Dropdown } from 'react-bootstrap'
+import { Dropdown, Nav, Navbar} from 'react-bootstrap'
+import 'bootstrap/js/dist/collapse'
+import { useEffect, useState } from 'react'
 
-const NavbarAdmin = () => {
+
+const NavbarAdmin = ({Toggle}) => {
+
+    const navigate = useNavigate();
+
+    const handleProfile = () => {
+        navigate('/profile');
+    }
+
+    const [userEmail, setUserEmail] = useState('');
+
+    useEffect(() => {
+        // Retrieve user email from local storage
+        
+    const storedUserEmail = localStorage.getItem('userEmail');
+
+    
+    setUserEmail(storedUserEmail);
+  }, []);
+    
+
+    const handleLogout = () => {
+        localStorage.removeItem('userEmail');
+        navigate('/login');
+      };
     
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white py-4 px-4 borber-bottom mb-4">
+    <Nav className="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4 border-0 text-light mb-4">
     <div className="d-flex align-items-between align-items-center">
-        <JustifyLeft className=" primary-text fs-4 me-3"  id="menu-toggle"/>
-        <h2 className="fs-2 m-0">Dashboard</h2>
+        <JustifyLeft className=" primary-text fs-4 me-3" onClick={Toggle}/> 
+            <h2 className="fs-2 m-0">Dashboard</h2>
+           
     </div>
+    
 
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-    </button>
+    <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span></button>
 
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+    <Navbar.Collapse  id="navbarSupportedContent">
+        <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
+        <p className='align-items-center text-center fs-5 fw-bold'>{userEmail}</p>
+      
         <Dropdown>
-            <Dropdown.Toggle variant="transparent border-0" id="dropdown-basic">
-                <PersonCircle className='fs-4'/>
+            <Dropdown.Toggle variant="transparent border-0 text-white" id="dropdown-basic">
+             <PersonCircle className='fs-4'/>
             </Dropdown.Toggle>
-
             <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Log Out</Dropdown.Item>
+                <Dropdown.Item onClick={handleProfile}>Profile</Dropdown.Item>
+                <Dropdown.Item onClick={handleLogout}>Log Out</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
         </ul>
-    </div>
-</nav>
+    </Navbar.Collapse>
+</Nav>
 
     
   )

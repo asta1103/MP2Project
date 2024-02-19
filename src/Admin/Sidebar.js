@@ -30,7 +30,7 @@ const Sidebar = () => {
         </Link>
         <Link to='/user' className='list-group-item py-2'>
           <PeopleFill className='fs-5 me-3'/>
-          <span className='fs-5'>User</span>
+          <span className='fs-5'>Users</span>
         </Link>
 
       </div>

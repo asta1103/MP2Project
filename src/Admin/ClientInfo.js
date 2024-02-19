@@ -1,61 +1,54 @@
 import React from 'react';
-import  {Card, Table} from 'react-bootstrap';
+import { Card, Container, Table } from 'react-bootstrap';
 import NavbarAdmin from './AdComp/NavbarAdmin';
-import Sidebar from '../Admin/Sidebar';
 
 
-const ClientInfo = () => {
+const ClientInfo = ({Toggle}) => {
   return (
-    <div className='container-fluid bg-secondary min-vh-100'>
-        <div className='row'>
-            <div className='col-2 bg-white vh-100'>
-                <Sidebar/>
-            </div>
-            <div className='col-10'>
-                 <NavbarAdmin/>
+    <div>
+      <NavbarAdmin Toggle={Toggle} />
+      <Container fluid>
+      <Card className='border-1'>
+            <Card.Header>
+              <h5 className='card-title'>Client Booking List</h5>
+              <div className='table-responsive'>
+              <Table striped bordered hover variant="light" responsive="sm">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Service</th>
+                    <th>Technician</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Request</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                  </tr>
+                </tbody>
+              </Table>
+              </div>
+            </Card.Header>
+          </Card>
+      </Container>
+    </div>     
+       
+  );
+};
 
-                 <Card className='border-1'>
-                    <Card.Header>
-                        <h5 className='card-tittle'>Client Booking List</h5>
-                        <Table striped bordered hover variant="light" responsive="sm">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Service</th>
-                                    <th>Technician</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Request</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                 </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                    <td>Table cell</td>
-                                </tr>
-                            </tbody>
-                        </Table>
-                    </Card.Header>
-                 </Card>
-             </div>
-        </div>
-    </div>
-
-
-   
-  )
-}
-
-export default ClientInfo
+export default ClientInfo;

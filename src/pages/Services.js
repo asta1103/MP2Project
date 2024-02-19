@@ -110,7 +110,7 @@ const services = () => {
                 <div className='col-lg-6 d-flex flex-column justify-content-around'>
                     {jdmData.map((jdmData) => (
                         <div key={jdmData.id}>
-                            <Card className='border-0 bg-dark text-white'>
+                            <Card className='border-0 bg-white'>
                                 <CardBody>
                                     <CardTitle className='text-center fs-6'>
                                         {jdmData.name}
@@ -138,7 +138,7 @@ const services = () => {
                         <div key={BodyColData.id}>
                             <Card className='border-0 bg-white '>
                                 <CardBody>
-                                    <CardTitle className='text-center fs-6'>
+                                    <CardTitle className='text-center fs-6 fw-bold'>
                                         {BodyColData.name}
                                     </CardTitle>
                                     <CardText className='text-center fs-6'>
@@ -168,7 +168,7 @@ const services = () => {
                 <div className='col-lg-6 d-flex flex-column justify-content-around'>
                     {PaintData.map((PaintData) => (
                         <div key={PaintData.id}>
-                            <Card className='border-0 bg-dark text-white'>
+                            <Card className='border-0 bg-white'>
                                 <CardBody>
                                     <CardTitle className='text-center fs-6'>
                                         {PaintData.name}
@@ -196,7 +196,7 @@ const services = () => {
                         <div key={DentData.id}>
                             <Card className='border-0 bg-white '>
                                 <CardBody>
-                                    <CardTitle className='text-center fs-6'>
+                                    <CardTitle className='text-center fs-5 fw-bold'>
                                         {DentData.name}
                                     </CardTitle>
                                     <CardText className='text-center fs-6'>

@@ -4,10 +4,10 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 
 const book = () => {
   return (
-    <div className='bg-secondary container-fluid my-5'>
+    <div className='bg-secondary container-fluid '>
       <Container>
         <Row className='gx-5'>
-          <Col className='col-lg-6 py-5'>
+          <Col className='col-lg-4 py-5'>
             <div className='py-5'>
               <h1 className='text-light mb-4'>
                 Make your Appoinment
@@ -17,9 +17,9 @@ const book = () => {
               </p>
             </div>
           </Col>
-          <Col className='col-lg-6'>
-            <div className='bg-dark h-100 d-flex flex-column justify-content-center text-center p-5'>
-              <h1 className='text-light mb-4'>
+          <Col className='col-lg-8'>
+            <div className='bg-dark h-100  d-flex flex-column justify-content-center text-center p-5'>
+              <h1 className='text-light mb-5 mt-5'>
                 Book For A Service
               </h1>
               <Form>
@@ -80,10 +80,10 @@ const book = () => {
                     </Form.Select>
                   </div>
                   <div className='col-12'>
-                    <Form.Control as="textarea" className='border-0' placeholder='Special Request'/>
+                    <Form.Control as="textarea" rows={5} className='border-0' placeholder='Special Request'/>
                   </div>
                   <div className='col-12'>
-                    <Button  type='submit' className='btn bg-secondary w-100 py-3 text-light'>
+                    <Button  type='submit' className='btn bg-secondary w-100 py-3 text-light border-0'>
                       <span>
                       Book Now
                       </span>

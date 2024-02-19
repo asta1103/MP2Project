@@ -12,4 +12,8 @@
     .form_container{
         width: 65%;
     }
+
+    .form_container p{
+        font-size: small;
+    }
 }

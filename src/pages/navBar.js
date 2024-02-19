@@ -12,7 +12,8 @@ const  NavBar = () => {
               JGarage.
             </Link>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+
+          <Navbar.Toggle aria-controls='basic-navbar-nav'/>
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-5 justify-content-end w-100'>
               <Nav.Link href='/' className='active text-uppercase'>Home</Nav.Link>

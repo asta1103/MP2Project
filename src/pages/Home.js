@@ -19,14 +19,14 @@ const Home = () => {
   return (
 
     <div>
-      <Carousel>
+      <Carousel fade>
           <Carousel.Item interval={1000}>
             <img 
             className='d-block w-100'
             src= {Carousel1}
             alt='First slide'
             />
-          <Carousel.Caption>
+          <Carousel.Caption className='bg-dark bg-opacity-75'>
             <Container>
               <h1>Car Servicing</h1>
               <h3>Auto Service, Maintenance and Repair</h3>
@@ -65,7 +65,7 @@ const Home = () => {
         <div className='container my-5'>
                 <div className='row'>
                     <div className='col-lg-6 d-flex justify-content-center d-none d-lg-flex'>
-                        <img src={AboutImg} className='img-fluid w-100 h-auto' alt="about img" />
+                        <img src={AboutImg} className='img-fluid w-100 h-auto' alt="about img"  />
                     </div>
                     <div className='col-lg-6 d-flex flex-column align-items-center justify-content-center'>
                         <h2 className='fs-1 mb-5 text-uppercase fw-bold'>About Us</h2>
