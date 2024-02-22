@@ -3,7 +3,7 @@ import { Card, Container, Table, Button, Spinner } from 'react-bootstrap';
 import NavbarAdmin from './AdComp/NavbarAdmin';
 
 
-const User = (Toggle) => {
+const User = () => {
   const [addUser, setAddUser] = useState([]);
   const [loading, setLoading] = useState(true);
   // const [currentUserEmail, setCurrentUserEmail] = useState(""); 
@@ -65,7 +65,7 @@ const User = (Toggle) => {
 
   return (
     <div>
-      <NavbarAdmin Toggle={Toggle} />
+      <NavbarAdmin />
       <Container>
         <Card className='border-1'>
           <Card.Header>

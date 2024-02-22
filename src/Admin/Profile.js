@@ -6,24 +6,13 @@ import NavbarAdmin from './AdComp/NavbarAdmin';
 
 
 
-const Profile = ({Toggle}) => {
+const Profile = () => {
 
-    const [userProf, setuserProf] = useState({
-        firstName: '',
-        lastName: '',
-        position: '',
-        address: '',
-        userEmail: '',
-        phoneNumber: '',
-        birthday: '',
-      });
+    const [userProf, setuserProf] = useState({})
 
       useEffect(() => {
-        // Make an HTTP GET request to retrieve the recent profile data
-        fetch('http://localhost:5000/allProfile')
-          .then((response) => response.json())
-          .then((data) => setuserProf(data))
-          .catch((error) => console.error('Error fetching recent profile:', error));
+        const storedUserProfile = JSON.parse(localStorage.getItem('userProfile'))
+        setuserProf(storedUserProfile || {});
       }, []);
 
       
@@ -41,8 +30,10 @@ const Profile = ({Toggle}) => {
           });
     
           if (response.ok) {
-            console.log('Profile updated successfully');
+            window.alert('Profile updated successfully');
+            console.log(userProf);
             // Optionally, you can update the UI or show a success message
+           
           } else {
             console.error('Failed to update profile');
             // Handle the error, show an error message, or perform other actions
@@ -52,10 +43,18 @@ const Profile = ({Toggle}) => {
         }
       };
 
+      const handleInputChange = (fieldName, value) => {
+        setuserProf((prevUserProf) => ({
+          ...prevUserProf,
+          [fieldName]: value,
+        }));
+      };
+    
+
 
   return (
     <div>
-        <NavbarAdmin Toggle={Toggle} />
+        <NavbarAdmin/>
         <Container fluid>
         <Col xl={12}>
             <Card className='mb-4'>
@@ -66,33 +65,31 @@ const Profile = ({Toggle}) => {
                         <div className='col-md-6'>
                             <Form.Label className='small mb-1'>First Name</Form.Label>
                             <Form.Control type='text'
-                            value={userProf.firstName}
-                            onChange={(e) => setuserProf(e.target.value)}
-                            required 
+                             value={userProf.firstname || ''}
+                             onChange={(e) => handleInputChange('firstname', e.target.value)}
+                             readOnly
                             />
                         </div>
                         <div className='col-md-6'>
                             <Form.Label className='small mb-1'>Last Name</Form.Label>
                             <Form.Control type='text'
-                            value={userProf.lastName}
-                            onChange={(e) => setuserProf(e.target.value)}
-                            required
+                            value={userProf.lastname || ''}
+                            onChange={(e) => handleInputChange('lastname', e.target.value)}
+                            readOnly
                             />
                         </div>
                         <div className='col-md-6'>
                             <Form.Label className='small mb-1'>Position</Form.Label>
                             <Form.Control type='text'
-                             value={userProf.position}
-                             onChange={(e) => setuserProf(e.target.value)}
-                             required
+                            value={userProf.position || ''}
+                            onChange={(e) => handleInputChange('position', e.target.value)}
                              />
                         </div>
                         <div className='col-md-6'>
                             <Form.Label className='small mb-1'>Address</Form.Label>
                             <Form.Control type='text'
-                             value={userProf.address}
-                             onChange={(e) => setuserProf(e.target.value)}
-                             required
+                             value={userProf.address || ''}
+                             onChange={(e) => handleInputChange('address', e.target.value)}
                              />
                         </div>
                         </div>
@@ -100,26 +97,24 @@ const Profile = ({Toggle}) => {
                             <Form.Label className='small mb-1'>Email</Form.Label>
                             <Form.Control 
                              type='email'
-                             value={userProf.userEmail}
-                            readOnly // Assuming email is not editable in the profile page
-                            required
+                             value={userProf.email || ''}
+                             onChange={(e) => handleInputChange('email', e.target.value)} 
+                             readOnly
                             />
                         </div>
                      <div className='row gx-3 mb-3'>
                          <div className='col-md-6'>
                             <Form.Label className='small mb-1'>Phone Number</Form.Label>
                             <Form.Control type='tel'
-                             value={userProf.phoneNumber}
-                             onChange={(e) => setuserProf(e.target.value)}
-                             required
+                            value={userProf.phone || ''}
+                            onChange={(e) => handleInputChange('phone', e.target.value)} 
                              />
                         </div>
                         <div className='col-md-6'>
                             <Form.Label className='small mb-1'>Birthday</Form.Label>
                             <Form.Control type='date'
-                             value={userProf.birthday}
-                             onChange={(e) => setuserProf(e.target.value)}
-                             required
+                            value={userProf.birthday || ''}
+                            onChange={(e) => handleInputChange('birthday', e.target.value)} 
                              />
                         </div>
                     </div>

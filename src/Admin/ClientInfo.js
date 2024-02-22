@@ -3,10 +3,10 @@ import { Card, Container, Table } from 'react-bootstrap';
 import NavbarAdmin from './AdComp/NavbarAdmin';
 
 
-const ClientInfo = ({Toggle}) => {
+const ClientInfo = () => {
   return (
     <div>
-      <NavbarAdmin Toggle={Toggle} />
+      <NavbarAdmin  />
       <Container fluid>
       <Card className='border-1'>
             <Card.Header>

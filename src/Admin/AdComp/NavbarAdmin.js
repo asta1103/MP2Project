@@ -38,8 +38,6 @@ const NavbarAdmin = ({Toggle}) => {
             <h2 className="fs-2 m-0">Dashboard</h2>
            
     </div>
-    
-
     <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     aria-expanded="false" aria-label="Toggle navigation">

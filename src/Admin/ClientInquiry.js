@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Card, Container, Table, Button, Spinner, Modal, Form } from 'react-bootstrap';
 import NavbarAdmin from './AdComp/NavbarAdmin';
 
-const ClientInquiry = ({ Toggle }) => {
+const ClientInquiry = () => {
   const [userMessage, setUserMessage] = useState([]);
   const [clientEmail, setClientEmail] = useState('');
   const [clientMessage, setClientMessage] = useState('');
@@ -69,7 +69,7 @@ const ClientInquiry = ({ Toggle }) => {
 
   return (
     <div>
-      <NavbarAdmin Toggle={Toggle} />
+      <NavbarAdmin />
       <Container fluid>
         <Card className='border-1'>
           <Card.Header>

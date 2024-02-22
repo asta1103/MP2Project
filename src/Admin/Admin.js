@@ -3,12 +3,12 @@ import '../Admin/admin.css'
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import NavbarAdmin from './AdComp/NavbarAdmin';
 
-const Admin = ({Toggle}) => {
+const Admin = () => {
     
   return (
 
     <div className='admin'>
-      <NavbarAdmin Toggle={Toggle}/>
+      <NavbarAdmin/>
       <Container fluid>
       <main className='content px-3 py-2'>
         <Container>
