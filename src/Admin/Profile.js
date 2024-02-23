@@ -33,6 +33,9 @@ const Profile = () => {
             window.alert('Profile updated successfully');
             console.log(userProf);
             // Optionally, you can update the UI or show a success message
+
+              // Save the updated profile to localStorage
+            localStorage.setItem('userProfile', JSON.stringify(userProf));
            
           } else {
             console.error('Failed to update profile');

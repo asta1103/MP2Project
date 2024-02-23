@@ -26,7 +26,7 @@ const Login = () => {
 
       if (response.status === 200) {
         console.log('Login successful:', data);
-        localStorage.setItem('userEmail', JSON.stringify(data.loginUser.email));
+        localStorage.setItem('userProfile', JSON.stringify(data.loginUser));
 
         navigate('/admin');
       } else {
