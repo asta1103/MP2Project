@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Container, Table, Button, Spinner } from 'react-bootstrap';
-import NavbarAdmin from './AdComp/NavbarAdmin';
+
 
 
 const User = () => {
@@ -65,7 +65,6 @@ const User = () => {
 
   return (
     <div>
-      <NavbarAdmin />
       <Container>
         <Card className='border-1'>
           <Card.Header>

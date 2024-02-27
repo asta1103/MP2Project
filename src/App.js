@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+
 import Home from './pages/Home';
 import About from './pages/About';
 import Book from './pages/Book';
@@ -17,17 +19,29 @@ import ClientInquiry from './Admin/ClientInquiry';
 import Admin from './Admin/Admin';
 import User from './Admin/User';
 import Profile from './Admin/Profile';
+import Add from './Admin/AdComp/Add';
 
 
 
 
 const App = () => {
+
+  //
+const [user, setUser] = useState(null); //for tracking user
+
+useEffect(() => {
+  const loggedUserJSON = window.localStorage.getItem("userProfile");
+
+  if (loggedUserJSON) {
+    const user = JSON.parse(loggedUserJSON);
+    setUser(user);
+  }
+}, []);
+//
+
+
   return (
     <div className='App'>
-
-    
- 
-  
       <Routes>
 
         <Route element={<RootLayout />}>
@@ -43,21 +57,18 @@ const App = () => {
  
       <Routes>
         <Route element ={<AdminRoot/>}>
-        <Route path='/admin' element={<Admin />} />
+        <Route path='/admin' element={<Admin user={user} setUser={setUser} />} />
         <Route path='/client' element={<ClientInfo />} />
         <Route path='/inquiry' element={<ClientInquiry />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/user' element={<User />} />
-
+        <Route path='/addclient' element={<Add />} />
         </Route>
 
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>  
-       
-
-
-
+      
  </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container } from 'react-bootstrap'
 import { Form } from 'react-bootstrap'
-import NavbarAdmin from './AdComp/NavbarAdmin';
+
 
 
 
@@ -32,14 +32,14 @@ const Profile = () => {
           if (response.ok) {
             window.alert('Profile updated successfully');
             console.log(userProf);
-            // Optionally, you can update the UI or show a success message
+           
 
               // Save the updated profile to localStorage
             localStorage.setItem('userProfile', JSON.stringify(userProf));
            
           } else {
             console.error('Failed to update profile');
-            // Handle the error, show an error message, or perform other actions
+            
           }
         } catch (error) {
           console.error('Error updating profile:', error);
@@ -57,7 +57,6 @@ const Profile = () => {
 
   return (
     <div>
-        <NavbarAdmin/>
         <Container fluid>
         <Col xl={12}>
             <Card className='mb-4'>

@@ -1,14 +1,13 @@
 import React from 'react';
 import '../Admin/admin.css'
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import NavbarAdmin from './AdComp/NavbarAdmin';
+
 
 const Admin = () => {
     
   return (
 
     <div className='admin'>
-      <NavbarAdmin/>
       <Container fluid>
       <main className='content px-3 py-2'>
         <Container>

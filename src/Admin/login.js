@@ -10,6 +10,16 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    // Check if the user is already logged in
+    const userProfile = localStorage.getItem('userProfile');
+
+    if (userProfile) {
+      // Redirect to admin page if the user is logged in
+      navigate('/admin');
+    }
+  }, [navigate]);
+
   const handleLogin = async (e) => {
     e.preventDefault();
 

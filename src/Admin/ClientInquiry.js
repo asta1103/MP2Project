@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card, Container, Table, Button, Spinner, Modal, Form } from 'react-bootstrap';
-import NavbarAdmin from './AdComp/NavbarAdmin';
+
 
 const ClientInquiry = () => {
   const [userMessage, setUserMessage] = useState([]);
@@ -69,7 +69,6 @@ const ClientInquiry = () => {
 
   return (
     <div>
-      <NavbarAdmin />
       <Container fluid>
         <Card className='border-1'>
           <Card.Header>
